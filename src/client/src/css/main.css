@@ -1,0 +1,74 @@
+header {
+  /* position: fixed; */
+  width: 100%;
+}
+
+main {
+  margin: 0 25%;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  bottom: -110px;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+}
+input:focus,
+textarea:focus {
+  border-color: rgb(141, 141, 141);
+}
+
+.title {
+  background-color: #769fcd;
+  padding: 10px 0px;
+}
+
+.title_link {
+  text-decoration: none;
+}
+
+.title_h1 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 43pt;
+  color: #f7fbfc;
+  margin: 0;
+}
+
+.login_link,
+.logout {
+  display: flex;
+  justify-content: right;
+  padding-right: 185px;
+  font-size: 10.5pt;
+  color: #f7fbfc;
+  text-decoration: none;
+}
+.logout:hover {
+  cursor: pointer;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  border: solid;
+  border-width: 0;
+  border-top-width: 1px;
+  border-color: rgba(0, 0, 0, 0.12);
+  padding: 13px 25px;
+}
+
+.MuiTable-root .muiTable {
+  width: 400px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

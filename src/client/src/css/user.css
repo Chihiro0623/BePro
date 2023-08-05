@@ -1,0 +1,34 @@
+.MuiTable-root .muiTable {
+  width: 400px;
+}
+
+.editContainer {
+  text-align: right;
+}
+
+#img-cell img {
+  width: 300px;
+}
+
+.MuiTable-root .MuiTableHead-root .MuiTableCell-root {
+  font-weight: bold;
+}
+
+.editContainer {
+  text-align: end;
+}
+
+.editContainer span {
+  border-radius: 4px;
+  background-color: #769fcd;
+  padding: 3px;
+  margin-left: 0.5%;
+  text-decoration: none;
+  font-size: smaller;
+  color: black;
+  cursor: pointer;
+}
+
+#edit-btn {
+  padding: 0;  
+}

@@ -1,0 +1,53 @@
+.projectList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.projectOutline {
+  width: 45%;
+  height: 180px;
+  margin: 2%;
+  padding: 0.5% 4% 2% 4%;
+  border: solid 1px;
+  border-radius: 13px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.projectOutline:hover {
+  cursor: pointer;
+  background-color: #e8e8e9;
+}
+
+.projectOutline_date {
+  font-size: small;
+}
+
+.participant_list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.participant {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3%;
+  margin: 2% 2.27%;
+  border: solid 1px;
+  height: 220px;
+}
+.participant > div > h4 {
+  margin: 0;
+}
+.participant > div > p {
+  margin: 0;
+  font-size: smaller;
+}
+.participant:hover {
+  cursor: pointer;
+  background-color: #e8e8e9;
+}

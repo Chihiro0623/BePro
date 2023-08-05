@@ -1,0 +1,68 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* text-align: center; */
+  align-items: center;
+}
+
+.login_title {
+  color: #769fcd;
+  text-align: center;
+  font-size: 35pt;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+.login_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 380px;
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5pt;
+  border-radius: 10px;
+  padding: 10pt 0pt;
+  border-color: grey;
+}
+
+.login_button {
+  height: 27px;
+  background-color: #f7fbfc;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1pt;
+  /* font-size: 10pt; */
+}
+.login_button:hover {
+  cursor: pointer;
+}
+
+.signup_massege {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 11pt;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  width: 380px;
+  background-color: whitesmoke;
+  border-style: solid;
+  border-width: 1.5pt;
+  border-radius: 10px;
+  padding: 10pt 0pt;
+  border-color: grey;
+}
+
+.signup_link {
+  margin-left: 4px;
+  color: cadetblue;
+  text-decoration: none;
+}
+
+.errorMessage {
+  color: red;
+  font-size: small;
+}

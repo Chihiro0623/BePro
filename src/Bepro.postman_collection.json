@@ -1,0 +1,418 @@
+{
+	"info": {
+		"_postman_id": "e26e8c93-faca-4225-85f4-8d3dd03ee6d5",
+		"name": "Bepro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24173360"
+	},
+	"item": [
+		{
+			"name": "File",
+			"item": [
+				{
+					"name": "파일 업로드",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/file",
+							"path": [
+								"file"
+							]
+						},
+						"description": "# 입력\n\nBody : 파일 데이터\n\n# 출력\n\n파일 고유 ID"
+					},
+					"response": []
+				},
+				{
+					"name": "파일 읽기",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/file/:fileid",
+							"path": [
+								"file",
+								":fileid"
+							],
+							"variable": [
+								{
+									"key": "fileid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 파일 고유 ID\n\n# Output\n\n파일 데이터"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "모든 글",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/post/all",
+							"path": [
+								"post",
+								"all"
+							]
+						},
+						"description": "# 출력\n\n모든 글 ID 목록"
+					},
+					"response": []
+				},
+				{
+					"name": "조건에 맞는 글",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "/post/query",
+							"path": [
+								"post",
+								"query"
+							]
+						},
+						"description": "# 입력\n\nBody : mongodb query\n\n# 출력\n\n해당 조건에 맞는 글들의 글 ID 목록"
+					},
+					"response": []
+				},
+				{
+					"name": "글 작성",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/post/write",
+							"path": [
+								"post",
+								"write"
+							]
+						},
+						"description": "# 입력\n\nBody : 글 데이터\n\n# 출력\n\n해당 글의 글 ID"
+					},
+					"response": []
+				},
+				{
+					"name": "글 읽기",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/post/:postid",
+							"path": [
+								"post",
+								":postid"
+							],
+							"variable": [
+								{
+									"key": "postid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 글 ID\n\n# 출력\n\n글 데이터"
+					},
+					"response": []
+				},
+				{
+					"name": "글 수정",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "/post/:postid",
+							"path": [
+								"post",
+								":postid"
+							],
+							"variable": [
+								{
+									"key": "postid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 글 ID\n\nBody : 수정한 글 데이터\n\n# 출력\n\n수정된 글 데이터"
+					},
+					"response": []
+				},
+				{
+					"name": "글 추천",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "/post/:postid/like",
+							"path": [
+								"post",
+								":postid",
+								"like"
+							],
+							"variable": [
+								{
+									"key": "postid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 글 ID\n\n# 출력\n\n현재 추천 수"
+					},
+					"response": []
+				},
+				{
+					"name": "글 댓글",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/post/:postid/comment",
+							"path": [
+								"post",
+								":postid",
+								"comment"
+							],
+							"variable": [
+								{
+									"key": "postid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 글 ID\n\nBody : 댓글 데이터\n\n# 출력\n\n해당 글의 댓글 데이터들 목록"
+					},
+					"response": []
+				},
+				{
+					"name": "프로젝트 참가 신청",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/post/:postid",
+							"path": [
+								"post",
+								":postid"
+							],
+							"variable": [
+								{
+									"key": "postid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 글 ID\n\nBody : 작성자 정보"
+					},
+					"response": []
+				},
+				{
+					"name": "프로젝트 참가 목록",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/post/:postid/participants",
+							"path": [
+								"post",
+								":postid",
+								"participants"
+							],
+							"variable": [
+								{
+									"key": "postid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 글 ID\n\n# 출력\n\n참가자 목록"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "모든 유저",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/user/all",
+							"path": [
+								"user",
+								"all"
+							]
+						},
+						"description": "# 출력\n\n모든 유저 ID 목록"
+					},
+					"response": []
+				},
+				{
+					"name": "로그인",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/user/login",
+							"path": [
+								"user",
+								"login"
+							]
+						},
+						"description": "# 입력\n\nBody : 로그인 정보\n\n# 출력\n\n유저 ID"
+					},
+					"response": []
+				},
+				{
+					"name": "회원가입",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/user/register",
+							"path": [
+								"user",
+								"register"
+							]
+						},
+						"description": "# 입력\n\nBody : 회원가입 정보\n\n# 출력\n\n유저 ID"
+					},
+					"response": []
+				},
+				{
+					"name": "유저 정보 읽기",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/user/:userid",
+							"path": [
+								"user",
+								":userid"
+							],
+							"variable": [
+								{
+									"key": "userid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 유저 ID\n\n# 출력\n\n유저 데이터"
+					},
+					"response": []
+				},
+				{
+					"name": "유저 정보 수정",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "/user/:userid",
+							"path": [
+								"user",
+								":userid"
+							],
+							"variable": [
+								{
+									"key": "userid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 글 ID\n\nBody : 수정된 유저 정보\n\n# 출력\n\n수정된 유저 정보"
+					},
+					"response": []
+				},
+				{
+					"name": "이력서 작성",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "/user/:userid/resume",
+							"path": [
+								"user",
+								":userid",
+								"resume"
+							],
+							"variable": [
+								{
+									"key": "userid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 유저 ID\n\nBody : 이력서 데이터\n\n# 출력\n\n이력서 데이터"
+					},
+					"response": []
+				},
+				{
+					"name": "이력서 읽기",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "/user/:userid/resume",
+							"path": [
+								"user",
+								":userid",
+								"resume"
+							],
+							"variable": [
+								{
+									"key": "userid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 유저 ID\n\n# 출력\n\n이력서 데이터"
+					},
+					"response": []
+				},
+				{
+					"name": "이력서 수정",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "/user/:userid/resume",
+							"path": [
+								"user",
+								":userid",
+								"resume"
+							],
+							"variable": [
+								{
+									"key": "userid",
+									"value": null
+								}
+							]
+						},
+						"description": "# 입력\n\nParams : 유저 ID\n\nBody : 수정된 이력서 데이터\n\n# 출력\n\n수정된 이력서 데이터"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
